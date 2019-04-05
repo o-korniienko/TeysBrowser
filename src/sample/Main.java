@@ -16,9 +16,9 @@ public class Main extends Application {
         loader.setLocation(getClass().getResource("web-view.fxml"));
         Parent root = loader.load();
         Controller controller = loader.getController();
-        MainBrowser browser = new MainBrowser(controller.getWeb(),controller);
-        browser.setEngine();
+        MainBrowser browser = new MainBrowser(controller);
         controller.setBrowser(browser);
+        controller.setMainWeb("https://google.com.ua");
 
 
         primaryStage.setTitle("MyBrowser");
